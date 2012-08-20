@@ -56,7 +56,7 @@ public class MainActivity extends FragmentActivity implements OnListChangedListe
 	}
 
 	@Override
-	public void onListChanged(List<SimpleListItem> items, String tag, int editType) {
+	public void onListChanged(List<SimpleListItem> items, String tag, int editType, SimpleListItem modifiedItem) {
 
 		Bundle args = new Bundle();
 		args.putInt("edit_type", editType);
