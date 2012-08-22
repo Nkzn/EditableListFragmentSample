@@ -12,7 +12,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
-import android.support.v4.view.Menu;
+import android.view.Menu;
 
 public class MainActivity extends FragmentActivity implements OnListChangedListener, LoaderCallbacks<List<SimpleListItem>> {
 
