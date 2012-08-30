@@ -8,13 +8,13 @@ import jp.water_cell.android.lib.EditableListFragment.OnListChangedListener;
 import jp.water_cell.android.lib.SimpleListItem;
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.LoaderManager.LoaderCallbacks;
 import android.support.v4.content.Loader;
-import android.view.Menu;
 
-public class MainActivity extends FragmentActivity implements OnListChangedListener, LoaderCallbacks<List<SimpleListItem>> {
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+
+public class MainActivity extends SherlockFragmentActivity implements OnListChangedListener, LoaderCallbacks<List<SimpleListItem>> {
 
 	ProgressDialog mSendDialog;
 
@@ -47,12 +47,6 @@ public class MainActivity extends FragmentActivity implements OnListChangedListe
 		FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 		transaction.add(R.id.fl_list, fragment, "hoge_first");
 		transaction.commit();
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_main, menu);
-		return true;
 	}
 
 	@Override
